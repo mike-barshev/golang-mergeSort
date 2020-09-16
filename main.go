@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// Merge sorts a slice chunk from MergeSort
 func Merge(left, right []int) []int {
 
 	size, i, j := len(left)+len(right), 0, 0
@@ -25,6 +26,7 @@ func Merge(left, right []int) []int {
 	return slice
 }
 
+// MergeSort divides slice into chunks to be sorted by calling itself recursively
 func MergeSort(slice []int) []int {
 
 	if len(slice) < 2 {
